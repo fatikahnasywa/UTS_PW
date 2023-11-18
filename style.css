@@ -1,0 +1,484 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Style dasar */
+body {
+    font-family: 'Trebuchet MS';
+    background-color: rgb(206, 146, 237);
+    margin: 3;
+    padding: 3;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 4%;
+    background-color: rgb(121, 28, 121) ;
+    border-bottom: 1px rgb(44, 21, 37) solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.navbar .logo a{
+    margin-left: 2rem;
+    font-weight: 700;
+    color: rgb(235, 41, 190);
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.navbar .logo a span{
+    color: rgb(220, 182, 220);
+}
+
+.navbar .navbar-nav a{
+    display: inline-block ;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem;
+    color: darkorchid;
+    font-weight: 600;
+    font-size: 0.8rem;
+    background: 2rem #15222c17;
+    border-radius: 20px;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+#menu {
+    display: none;
+}
+
+main {
+    padding: 20px;
+}
+
+@media screen and (max-width: 2000px) {
+    html{
+        font-size: 75%;
+    }
+
+    #menu{
+        display: inline-block;
+    }
+
+    .navbar{
+        padding: 1.8rem 4%;
+    }
+
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: plum;
+        width: 30rem;
+        height: 100vh;
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0;
+        transition: 1s;
+    }
+
+    .navbar .navbar-nav a{
+        font-size: large;
+        color: #fff;
+        display: block;
+        margin: 1.4rem;
+    }
+
+    .navbar .navbar-nav a:hover{
+        color: rgb(217, 0, 255);
+        font-size: 1.6rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        content: '';
+        display: block;
+        padding-bottom: 0.2rem;
+        border-bottom: 0.1rem solid rgb(217, 0, 255);
+        transform: scaleX(0);
+        transition: 0.2s linear;
+    }
+}
+
+/* Header dengan latar belakang gambar makeup */
+.header-background {
+    background-image: url(https://static.promediateknologi.id/crop/101x170:701x525/750x500/webp/photo/2023/02/22/Screenshot_2023-02-22-11-01-10-56-2780304857.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(64, 9, 64);
+    text-align: center;
+    font-size: 40px;
+    padding-top: 250px;
+    padding-bottom: 250px ;
+}
+
+/*Subjudul*/
+
+.subjudul {
+    background-color: slateblue;
+}
+.subjudul h2 {
+    text-align: center;
+    font-size: 35px;
+    color: blanchedalmond;
+    font-family: 'Trebuchet MS';
+}
+
+.subjudul p {
+    text-align: center;
+    font-size: 25px;
+    color: blanchedalmond;
+    font-family: 'Trebuchet MS';
+}
+
+
+/* container slide start */
+.container {
+    position: relative;
+    background: slategrey;
+}
+
+.slide-1 {
+    background: url(https://images.somethinc.com/uploads/products/thumbs/800x800/22092022_FEED-1_FC.jpg);
+}
+
+.slide-2 {
+    background: url(https://down-id.img.susercontent.com/file/0066962cce02d8e0ab20c9751da628df);
+}
+
+.slide-3 {
+    background: url(https://asset-a.grid.id/crop/39x42:681x357/700x0/photo/2020/08/17/493093540.jpg);
+}
+
+.slide-4 {
+    background: url(https://images.tokopedia.net/img/cache/900/VqbcmM/2023/8/20/ba47f847-dcfb-4910-9f00-68493a538e68.jpg);
+}
+
+.slide-5 {
+    background: url(https://images.soco.id/723-brow-people-2.jpg.jpeg);
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.caption {
+    background: #15222c14;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px 0px;
+
+}
+
+.caption h3 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    text-shadow: 10px 10px 20px rgb(1, 1, 3, 0.7);
+}
+
+.caption p {
+    max-width: 600px;
+    width: 90px;
+    margin: 0px auto;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5em;
+    text-shadow: 10px 10px 20px rgb(1, 1, 3, 0.7);
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0, .1);
+    border-radius: 50%;
+    transform: background 500ms;
+}
+
+.arrow img{
+  width: 40px;
+}
+
+.arrow:hover{
+    background: rgba(0, 0, 0, 0, .4);
+}
+
+.l{
+    left: 0;
+}
+
+.r{
+    right: 0;
+}
+
+/* container slide end */
+
+/* untuk tentang */
+.about {
+    background-color: darkmagenta;
+}
+.about h2 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(249, 204, 249);
+    font-family: 'Trebuchet MS';
+    margin: 2px;
+    padding: 2px;
+    text-decoration: underline palevioletred;
+}
+.about p {
+    text-align: justify;
+    font-size: 15px;
+    color: rgb(249, 204, 249);
+    font-family: 'Trebuchet MS';
+    margin: 5px;
+    padding: 10px;
+}
+
+.merk h3 {
+    font-size: 25px;
+    text-align: center;
+    color: rgb(249, 204, 249);
+    text-decoration: underline palevioletred ;
+}
+
+.brand p {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(249, 204, 249);
+    font-family: 'Trebuchet MS';
+    margin: 5px;
+    padding: 10px;
+}
+
+.read-more-link {
+    color: rgb(234, 107, 234);
+    text-decoration: none;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}
+/* untuk tentang end*/
+
+/* untuk product */
+
+section .nama h2 {
+   text-align: center;
+   font-size: 30px;
+    color: purple;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    text-decoration: underline lightblue;
+}
+
+
+section .product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+   
+}
+
+section .product div {
+    padding: 10px;
+    border: 1px solid purple;
+    margin: 10px;
+}
+
+section#product div img{
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+section#product div img:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+} 
+
+section h2 {
+    text-align: center;
+}
+
+section#makeup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+section#makeup div {
+    padding: 10px;
+    border: 1px solid purple;
+    margin: 5px;
+}
+
+section#makeup div img {
+    height: 200px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+}
+
+section#makeup div img:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+/* untuk product */
+
+section .testimoni h2 {
+    text-align: center;
+    font-size: 30px;
+    color: lightgoldenrodyellow;
+    background-color:  rgb(84, 21, 84);
+    font-family: 'Trebuchet MS';
+}
+
+
+section .testimoni h3{
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+}
+
+section#testimoni {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: rgba(240, 128, 128, 0.477);
+   
+}
+
+section#testimoni div {
+    padding: 10px;
+    border: 3px solid rgb(84, 21, 84);
+    margin: 10px;
+}
+
+.membership {
+    background-color: rgb(235, 41, 190);
+}
+
+.membership h2 {
+    text-decoration: underline lightsalmon;
+    font-family: 'Trebuchet MS';
+    font-size: 25px;
+    color: purple;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #d57bd5;
+    padding: 30px;
+    border-radius: 20px ;
+    box-shadow: 0px 10px rgba(12, 11, 11, 0.2);
+}
+
+label {
+    display: contents;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: lightcoral;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: lightblue;
+}
+
+footer {
+    padding: 60px 0px 60px 0px;
+    background-color: rgb(121, 28, 121);
+    color: #ffffff;
+    width: 100%;
+}
+
+footer .person {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+    font-family: 'Trebuchet MS';
+}
+
+footer .person div {
+    width: 20%;
+}
+
+footer .person h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .person p {
+    font-size: 10px;
+}
+
+footer .person .copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid plum;
+    text-align: center;
+} 
+
+
+
+
+
+
+
+
+
